@@ -8,6 +8,7 @@ class Restaurante:
         self._ativo = False
         # ativo: bool = False
         self._avaliacao = []
+        self._cardapio = []
         Restaurante.restaurantes.append(self)
 
     def __str__(self):
@@ -42,17 +43,6 @@ class Restaurante:
         quantidade_de_notas = len(self._avaliacao)
         media = round(soma_das_notas / quantidade_de_notas, 1)
         return media
-        
-
-
-# restaurante_praca = Restaurante("Praça", "Gourmet")
-# restaurante_praca.alternar_estado()
-# restaurante_pizza = Restaurante("Pizza Express", "Italiana")
-# restaurantes = [restaurante_praca, restaurante_pizza]
-# print(dir(restaurante_praca))
-# print(vars(restaurante_praca))
-# print(vars(restaurante_pizza))
-# print(restaurante_praca)
-# print(restaurante_pizza)
-# print(restaurante_praca.ativo)
-# Restaurante.listar_restaurantes()
+    
+    def adicionar_bebida_no_cardapio(self, bebida):
+        self._cardapio.append(bebida)
