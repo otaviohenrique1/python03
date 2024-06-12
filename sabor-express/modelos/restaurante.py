@@ -46,3 +46,6 @@ class Restaurante:
     
     def adicionar_bebida_no_cardapio(self, bebida):
         self._cardapio.append(bebida)
+        
+    def adicionar_prato_no_cardapio(self, prato):
+        self._cardapio.append(prato)
